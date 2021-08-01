@@ -148,15 +148,14 @@ h3 {
 
 #templatemo_menu_wrapper {
 	width: 100%;
-	height: 94px;
+	height: 90px;
 	margin: 0 auto;
 }
 
 #templatemo_menu {
-	width: 920px;
-	height: 94px;
+	width: 913px;
+	height: 100px;
 	margin: 0 auto;
-	padding: 0 30px;
 }
 
 #templatemo_menu ul {

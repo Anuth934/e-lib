@@ -15,13 +15,6 @@
                 <img src="Images/e-lib.png" height="100px" alt="Site Title" />
 
             </a>
-
-	         <ul>
-	           <li><a href="adminlogin.html" style="background-color: white;">Logout</a></li>
-	             
-	                   
-	          </ul>    	
-     
            
         </div>
     
@@ -32,14 +25,20 @@
 <div id="templatemo_menu_wrapper">
     <div id="templatemo_menu">
         
+<div id="templatemo_menu_wrapper">
+    <div id="templatemo_menu">
+
         <ul>
            <li><a href="index.html">Home</a></li>
-                    <li><a href="member.jsp">Member Details</a></li>
-                    <li><a href="bookdetailsforbookdetails.jsp">Book Details</a></li>
-                     <li><a href="aboutus.jsp">About Us</a></li>
+                    <li><a href="members.jsp">Member Details</a></li>
+                    <li><a href="bookingdetails.jsp">Book Details</a></li>
+                    <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
+                     <li><a href="adminlogin.html">Logout</a></li>
                    </ul>    	
      
+    </div> <!-- end of templatemo_menu -->
+</div>
     </div> <!-- end of templatemo_menu -->
 </div>
 
@@ -63,19 +62,27 @@
         
         <div class="content_box">
         
-        	<h2>Testimonial</h2>
-            
-            <div class="section_w250 float_l">
-				<h3>Praesent sollicitudin</h3>            
-				<p>Nullam faucibus volutpat sapien sit amet tristique. Suspendisse venenatis, urna nec rhoncus suscipit, turpis turpis auctor nisi.</p>
-            
-            </div>  
-            
-            <div class="section_w250 float_r">
-				<h3>Quisque blandit</h3>            
-				<p>Morbi blandit ipsum sed purus vestibulum bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nibh sed tellus.</p>
-            
-            </div>            
+        	<form method="post" action="registrationpage"> 
+
+            <label> Book ID : </label>  
+            <label>001</label> <br><br>
+			<label> Book Name : </label>         
+			<label>Harry Potter and the philosopher's stone</label> <br><br>
+			<label> Author : </label>         
+			<label>J.K. Rowling</label> <br><br>  
+			  
+			<label>   
+			Publish Date :  
+			</label>  
+			<label>01-02-2001</label> <br><br>
+	
+			<label> Status : </label>         
+			 <label>Available</label> <br><br>
+			
+			<input type="submit" value="Issue"/>  
+			<input type="submit" value="Delete"/> 
+			</form>  
+           
            
         
         	<div class="cleaner"></div>

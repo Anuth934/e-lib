@@ -14,15 +14,8 @@
            <a href="#" style="float:left;" target="_parent">
                 <img src="Images/e-lib.png" height="100px" alt="Site Title" />
 
-            </a>
-
-	         <ul>
-	           <li><a href="adminlogin.html" style="background-color: white;">Logout</a></li>
-	             
-	                   
-	          </ul>    	
+            </a>	
      
-           
         </div>
     
     </div>
@@ -31,13 +24,13 @@
 
 <div id="templatemo_menu_wrapper">
     <div id="templatemo_menu">
-        
         <ul>
            <li><a href="index.html">Home</a></li>
                     <li><a href="members.jsp">Member Details</a></li>
                     <li><a href="bookingdetails.jsp">Book Details</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
+                     <li><a href="adminlogin.html">Logout</a></li>
                    </ul>    	
      
     </div> <!-- end of templatemo_menu -->
@@ -63,13 +56,32 @@
         
         <div class="content_box">
         
-        	<h2>Member Details</h2>
+        	<h2>Member Details</h2><br>
             
-            <form action="www.javatpoint.com" method="get">
-	            <label>Please enter your email address to ask or post java Question Answer.</label>
-	            <input type="text" value="" name="username" size="10" id="input_field" title="usernmae" />
-	            <input type="submit" name="login" value="Ask" alt="login" id="submit_btn" title="Login" />
-            </form>
+		<form method="post" action="registrationpage"> 
+
+		<label> Firstname </label>         
+		<input type="text" name="firstname" size="15"/> <br> <br>  
+		<label> Lastname: </label>         
+		<input type="text" name="lastname" size="15"/> <br> <br>  
+		  
+		<label>   
+		Phone :  
+		</label>  
+		<input type="text" name="country code"  value="+1" size="3"/>   
+		<input type="text" name="phone" maxlength="10" size="10" /> <br> <br>  
+		Address  
+		<br>  
+		<textarea cols="80" rows="5" name="address" > 
+		</textarea>  
+		<br> <br>  
+		Email:  
+		<input type="email" id="email" name="email"/> <br>    
+		<br> <br>  
+
+		
+		<input type="submit" value="Update"/>  
+		</form>  
            
         
         	<div class="cleaner"></div>
@@ -89,7 +101,7 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Adminstrator</a></li>
                     <li><a href="memberdetails.jsp">Library Member</a></li>
-                    <li><a href="bookingdetails.jsp">Book Details</a></li>
+                    <li><a href="bookdetails.jsp">Book Details</a></li>
                      <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
             </ul>
