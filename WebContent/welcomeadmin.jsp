@@ -14,15 +14,8 @@
            <a href="#" style="float:left;" target="_parent">
                 <img src="Images/e-lib.png" height="100px" alt="Site Title" />
 
-            </a>
-
-	         <ul>
-	           <li><a href="adminlogin.html" style="background-color: white;">Logout</a></li>
-	             
-	                   
-	          </ul>    	
+            </a>	
      
-           
         </div>
     
     </div>
@@ -31,13 +24,13 @@
 
 <div id="templatemo_menu_wrapper">
     <div id="templatemo_menu">
-        
         <ul>
            <li><a href="index.html">Home</a></li>
                     <li><a href="members.jsp">Member Details</a></li>
                     <li><a href="bookingdetails.jsp">Book Details</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
+                     <li><a href="adminlogin.html">Logout</a></li>
                    </ul>    	
      
     </div> <!-- end of templatemo_menu -->
