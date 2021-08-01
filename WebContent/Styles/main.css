@@ -157,7 +157,6 @@ h3 {
 	height: 94px;
 	margin: 0 auto;
 	padding: 0 30px;
-	
 }
 
 #templatemo_menu ul {
@@ -165,6 +164,7 @@ h3 {
 	margin: 0px;
 	padding: 0px;
 	list-style: none;
+	background-color: lightgrey;
 }
 
 #templatemo_menu ul li {
@@ -276,14 +276,14 @@ h3 {
 	outline: none;
 }
 
-#templatemo_content {
+/* #templatemo_content {
 	float:right;
 	width: 590px;
-}
+} */
 
 .content_box {
 	clear: both;
-	width: 530px;
+	/* width: 530px; */
 	padding: 20px 30px;
 	background: #fff;
 }
