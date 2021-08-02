@@ -40,17 +40,15 @@
     
     	<div class="content_box">
         
-        	<h2 style="font-size:40px;">Welcome to E Lib</h2>
+        	<h2 style="font-size:40px;">Welcome Admin</h2>
         	<div class="cleaner_h60"></div>
             
-            <p style="font-size:40px; font-style: italic; line-height: 1.5em;"> “The reading of all good books is like conversation with the finest (people) of the past centuries.”</p>
             
           <div class="cleaner_h20"></div>
             
             
             <div class="section_w250 float_r">
             
-            	<p style="float: right; font-size:20px;">- Descartes</p>
             
             </div>
         <div class="cleaner_h20"></div>

@@ -1,5 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page import="java.util.List"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,107 +10,105 @@
 <link href="../Styles/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div id="templatemo_header_wrapper">
-    <div id="templatemo_menu">
-    	<div id="site_title">
-           <a href="#" style="float:left;" target="_parent">
-                <img src="../Images/e-lib.png" height="100px" alt="Site Title" />
 
-            </a>	
-     
-        </div>
-    
-    </div>
+	<c:set var="context" value="${pageContext.request.contextPath}" />
+	<div id="templatemo_header_wrapper">
+		<div id="templatemo_menu">
+			<div id="site_title">
+				<a href="#" style="float: left;" target="_parent"> <img
+					src="../Images/e-lib.png" height="100px" alt="Site Title" />
+				</a>
+				<ul style="background-color: white;">
+					<li><a href="memberlogin.html">Logout</a></li>
+				</ul>
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="${context}/admin/welcome.jsp">Home</a></li>
+					<li><a href="${context}/admin/members">Member Details</a></li>
+					<li><a href="${context}/admin/bookdetails.jsp">Book Details</a></li>
+					<li><a href="${context}/admin/contactus">About Us</a></li>
+				</ul>
+			</div>
 
-</div>
+		</div>
+	</div>
 
-<div id="templatemo_menu_wrapper">
-    <div id="templatemo_menu">
-        <ul>
-           <li><a href="../index.html">Home</a></li>
-                    <li><a href="members.jsp">Member Details</a></li>
-                    <li><a href="bookingdetails.jsp">Book Details</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                     <li><a href="adminlogin.html">Logout</a></li>
-                   </ul>    	
-     
-    </div> <!-- end of templatemo_menu -->
-</div>
+	<div id="templatemo_content">
 
-<div id="templatemo_content_wrapper">
+		<c:set var="context" value="${pageContext.request.contextPath}" />
 
-	
-    
+		<div class="content_box">
+			<div class="MemberDetails">
+				<label>Members</label> 
+			</div>
 
-			
-          <%--   <h2>AskQuestions</h2>
-            
-            <form action="www.javatpoint.com" method="get">
-            <label>Please enter your email address to ask or post java Question Answer.</label>
-            <input type="text" value="" name="username" size="10" id="input_field" title="usernmae" />
-            <input type="submit" name="login" value="Ask" alt="login" id="submit_btn" title="Login" />
-            </form>--%>
-            
-    
-     <div id="templatemo_content">
+			<div class="registrationlink">
+				<a href="${context}/admin/memberregistration.jsp">Register new member</a>
+			</div>
 
-        
-        <div class="content_box">
-        
-        	<h2>Member Details</h2><br>
-            
-		<form method="post" action="registrationpage"> 
+			</br>
+			<div class="memberlist">
+				<table style="width: 100%">
+					<thead>
+						<tr>
+							<th style="width: 10%">Id</th>
+							<th style="width: 10%">Last Name</th>
+							<th style="width: 10%">First Name</th>
+							<th style="width: 10%">Email</th>
+							<th style="width: 10%">Phone Number</th>
+							<th style="width: 20%">Address</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${userDetails}" var="member">
+							<tr>
+								<td style="text-align: center;"><a
+									href="${context}/admin/members?id=${member.id}"><c:out
+											value="${member.id}" /></a></td>
+								<td style="text-align: center;"><c:out
+										value="${member.lastName}" /></td>
+								<td style="text-align: center;"><c:out
+										value="${member.firstName}" /></td>
+								<td style="text-align: center;"><c:out
+										value="${member.email}" /></td>
+								<td style="text-align: center;"><c:out
+										value="${member.phoneNumber}" /></td>
+								<td style="text-align: center;"><c:out
+										value="${member.address}" /></td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+			</div>
+			<div class="cleaner"></div>
+		</div>
+		<div class="content_box_bottom"></div>
 
-		<label> Firstname </label>         
-		<input type="text" name="firstname" size="15"/> <br> <br>  
-		<label> Lastname: </label>         
-		<input type="text" name="lastname" size="15"/> <br> <br>  
-		  
-		<label>   
-		Phone :  
-		</label>  
-		<input type="text" name="country code"  value="+1" size="3"/>   
-		<input type="text" name="phone" maxlength="10" size="10" /> <br> <br>  
-		Address  
-		<br>  
-		<textarea cols="80" rows="5" name="address" > 
-		</textarea>  
-		<br> <br>  
-		Email:  
-		<input type="email" id="email" name="email"/> <br>    
-		<br> <br>  
+	</div>
 
-		
-		<input type="submit" value="Update"/>  
-		</form>  
-           
-        
-        	<div class="cleaner"></div>
-        </div><div class="content_box_bottom"></div>
-    
-    </div> <!-- end of content -->
-    
-    <div class="cleaner"></div>
 
-</div>
 
-<div id="templatemo_footer_wrapper">
 
-    <div id="templatemo_footer">
-    
-        <ul class="footer_menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Adminstrator</a></li>
-                    <li><a href="memberdetails.jsp">Library Member</a></li>
-                    <li><a href="bookdetails.jsp">Book Details</a></li>
-                     <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-            </ul>
-                
-                Copyright Â© 2021 <a href="#">e-lib library management system</a> | 
-                
-    </div>
-</div>
+
+
+	<div id="templatemo_footer_wrapper">
+
+		<div id="templatemo_footer">
+
+			<ul class="footer_menu">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Administrator</a></li>
+				<li><a href="memberdetails.jsp">Member Details</a></li>
+				<li><a href="bookingdetails.jsp">Book Details</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="welcomeadmin.jsp">Contact Us</a></li>
+			</ul>
+
+			Copyright © 2021 <a href="#">e-lib library management system</a> |
+
+
+		</div>
+	</div>
 </body>
 </html>

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.elib.database.table.LibraryUser;
 
-@WebServlet(urlPatterns = "/admin/registernewuser")
+//@WebServlet(urlPatterns = "/admin/registernewuser")
 public class RegisterNewUserServlet extends HttpServlet {
 	
 	private void doMethod(HttpServletRequest req, HttpServletResponse res) throws IOException {
@@ -22,14 +22,14 @@ public class RegisterNewUserServlet extends HttpServlet {
 		String phone = req.getParameter("phone");
 		String password = req.getParameter("password");
 		
-		try {
-			LibraryUser.insertRecord(lastName, firstName, email, password, countrycode+phone, address, 0);
+		/*try {
+			//LibraryUser.insertRecord(lastName, firstName, email, password, countrycode+phone, address, 0);
 			
 			res.sendRedirect(req.getContextPath() + "/admin/members");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		} */
 		
 	}
 

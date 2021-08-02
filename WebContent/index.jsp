@@ -1,5 +1,4 @@
-<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +8,6 @@
 </head>
 <body>
 
-<c:set var="context" value="${pageContext.request.contextPath}" />
 <div id="templatemo_header_wrapper">
     <div id="templatemo_menu">
     	<div id="site_title">
@@ -19,8 +17,8 @@
             </a>
 
 	         <ul style="background-color: white;">
-	           <li><a href="memberlogin.html">Member Login</a></li>
-	           <li><a href="${context}/admin/login.jsp">Administrator Login</a></li>
+	           <li><a href="user/userlogin.html">Member Login</a></li>
+	           <li><a href="admin/login.jsp">Administrator Login</a></li>
 	             
 	                   
 	          </ul>    	
@@ -70,10 +68,10 @@
         <ul class="footer_menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Administrator</a></li>
-                    <li><a href="memberdetails.jsp">Library Member</a></li>
-                    <li><a href="bookingdetails.jsp">Book Details</a></li>
-                     <li><a href="#">About Us</a></li>
-                    <li><a href="welcomeadmin.jsp">Contact Us</a></li>
+                    <li><a href="admin/memberdetails.jsp">Library Member</a></li>
+                    <li><a href="admin/bookdetails.jsp">Book Details</a></li>
+                     <li><a href="admin/members.jsp">About Us</a></li>
+                    <li><a href="admin/welcomeadmin.jsp">Contact Us</a></li>
             </ul>
                 
                 Copyright © 2021 <a href="#">e-lib library management system</a> | 

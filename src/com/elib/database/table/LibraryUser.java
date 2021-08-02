@@ -1,15 +1,12 @@
 package com.elib.database.table;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 import com.elib.database.connection.DBConnection;
 import com.elib.model.User;
-
 public class LibraryUser {
 	
 	/**
@@ -23,10 +20,8 @@ public class LibraryUser {
 	 * @param userType
 	 * @throws SQLException
 	 */
-
 	public static void insertRecord(User user) throws SQLException
 	{
-
 		try (Connection con = DBConnection.dbConnection();
 				PreparedStatement stmt = con.prepareStatement("insert into libraryuser(LastName, FirstName,Emailid, Userpassword, Phonenumber, Address, Usertype) "
 						+ "values(?,?,?,?,?,?,?)");) {
@@ -40,7 +35,6 @@ public class LibraryUser {
 			stmt.setInt(7, user.getUserType());
 			stmt.executeUpdate();
 			System.out.println("inserted Succesfully");
-
 		} catch(Exception e) {
 			System.out.println("Some error : " + e);
 		}
@@ -94,7 +88,6 @@ public class LibraryUser {
 			return null;
 		} 
 	}
-
 	/**
 	 * Method to get the details of all the users
 	 * @return
@@ -114,9 +107,10 @@ public class LibraryUser {
 				User user = new User();
 				
 				mapUser(resultSet, user);
-				
-				users.add(user);
-			}
+				if(!user.isAdmin()) {
+					users.add(user);
+				}
+		}
 			
 			return users;
 			
@@ -175,6 +169,45 @@ public class LibraryUser {
 	}
 	
 	/**
+	 * Method to search users by their email
+	 * @param name
+	 * @return
+	 */
+	public static User getUserDetailsByEmail(String email) {
+		
+		PreparedStatement stmt = null;
+		
+		try (Connection con = DBConnection.dbConnection()) {
+			stmt = con.prepareStatement("select * from libraryuser where Emailid=?");
+			
+			stmt.setString(1, email);	
+			
+			ResultSet resultSet = stmt.executeQuery();
+			
+			User user = new User();
+			
+			while(resultSet.next()){
+				mapUser(resultSet, user);
+			}
+			
+			return user;
+			
+		} catch(Exception e) {
+			System.out.println("Some error : " + e);
+			return null;
+		} finally {
+			try {
+				stmt.close();
+			} catch(Exception e) {
+				System.out.println("Some error : " + e);
+			}
+		}
+		
+	}
+	
+	
+	
+	/**
 	 * Method to map the values from resultset to a user object
 	 * @param resultSet
 	 * @param user
@@ -185,6 +218,7 @@ public class LibraryUser {
 		user.setLastName(resultSet.getString("LastName"));
 		user.setFirstName(resultSet.getString("FirstName"));
 		user.setEmail(resultSet.getString("Emailid"));
+		user.setPassword(resultSet.getString("Userpassword"));
 		user.setPhoneNumber(resultSet.getString("Phonenumber"));
 		user.setAddress(resultSet.getString("Address"));
 		user.setUserType(resultSet.getInt("Usertype"));
