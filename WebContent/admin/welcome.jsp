@@ -23,8 +23,8 @@
         <div class="menu">
         	    	<ul>
                     <li><a href="${context}/admin/welcome.jsp">Home</a></li>
-                    <li><a href="${context}/admin/members.jsp">Member List</a></li>
-                    <li><a href="${context}/admin/bookds.jsp">Book List</a></li>
+                    <li><a href="${context}/admin/members">Member List</a></li>
+                    <li><a href="${context}/admin/bookds">Book List</a></li>
                      <li><a href="${context}/admin/contactus">About Us</a></li>
        </ul>
         </div>

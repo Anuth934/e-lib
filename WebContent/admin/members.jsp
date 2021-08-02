@@ -39,7 +39,7 @@ function myFunction() {
 				<a href="#" style="float: left;" target="_parent"> <img
 					src="../Images/e-lib.png" height="100px" alt="Site Title" />
 				</a>
-				<ul style="background-color: white;">
+				<ul>
 					<li><a href="memberlogin.html">Logout</a></li>
 				</ul>
 			</div>
@@ -65,7 +65,7 @@ function myFunction() {
 			</div>
 			<br>
 			<div class="registrationlink">
-				<a href="${context}/admin/memberregistration.jsp">Add new member</a>
+				<a style="font-size:16px;" href="${context}/admin/memberregistration.jsp">Add new member</a>
 			</div>
 
 			 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">

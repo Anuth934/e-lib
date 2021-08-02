@@ -36,13 +36,13 @@ public class ListMembersServlet extends HttpServlet{
 				List<User> userDetailsByLastName = LibraryUser.getUserDetailsByLastName(lastName);
 				req.getSession().setAttribute("userDetails", userDetailsByLastName);
 				//redirect to member list page
-				res.sendRedirect(req.getContextPath() + "/admin/memberdetails.jsp");
+				res.sendRedirect(req.getContextPath() + "/admin/members.jsp");
 				
 			} else {
 				List<User> userDetails = LibraryUser.getUserDetails();
 				req.getSession().setAttribute("userDetails", userDetails);
 				//redirect to single member details page
-				res.sendRedirect(req.getContextPath() + "/admin/memberdetails.jsp");
+				res.sendRedirect(req.getContextPath() + "/admin/members.jsp");
 				
 			}
 		} catch (Exception e) {

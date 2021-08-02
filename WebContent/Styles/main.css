@@ -153,21 +153,20 @@ h3 {
 }
 
 #templatemo_menu {
-	width: 913px;
+	width: 95%;
 	height: 100px;
 	margin: 0 auto;
 }
 
 #templatemo_menu ul {
 	float: right;
-	margin: 0px;
+	margin: 10px 25px;
 	padding: 0px;
 	list-style: none;
-	background-color: lightgrey;
 }
 
 #templatemo_menu ul li {
-	padding: 0px;
+	padding: 10px;
 	margin: 0px;
 	display: inline;
 }
@@ -282,8 +281,9 @@ h3 {
 
 .content_box {
 	clear: both;
-	/* width: 530px; */
-	padding: 20px 30px;
+    width: 92% !important;
+    padding: 20px 20px;
+    margin: 36px;
 	background: #fff;
 }
 
@@ -318,9 +318,12 @@ h3 {
 /* footer */
 
 #templatemo_footer_wrapper {
+	position: fixed;
+	left: 0;
+	bottom: 0;
 	width: 100%;
-	margin: 0 auto;
-	background: #fff url(images/templatemo_footer_top.jpg) top repeat-x;	
+	background-color: #fff;
+    text-align: center;	
 }
 
 #templatemo_footer {
@@ -369,6 +372,7 @@ h3 {
   width: 100%;
   border: 1px solid #ddd;
   font-size: 18px;
+  overflow-y: scroll;
 }
 
 #myTable th, #myTable td {

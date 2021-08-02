@@ -30,7 +30,7 @@ public class LoginServlet extends HttpServlet{
 				if(user.isAdmin()) {
 					res.sendRedirect(req.getContextPath() + "/admin/welcome.jsp"); //admin login page
 				} else {
-					res.sendRedirect(req.getContextPath() + "/admin/welcome.jsp"); //member login page
+					res.sendRedirect(req.getContextPath() + "/user/welcome.jsp"); //member login page
 				}
 			} else {
 				if(user.isAdmin()) {
