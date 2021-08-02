@@ -10,7 +10,12 @@ public class User {
 	String phoneNumber;
 	String address;
 	int userType;
+	boolean admin;
 	
+	public boolean isAdmin() {
+		return userType == 1;
+	}
+
 	@Override
 	public String toString() {
 		return "LibraryUser [id=" + id + ", lastName=" + lastName + ", firstName=" + firstName + ", email=" + email
