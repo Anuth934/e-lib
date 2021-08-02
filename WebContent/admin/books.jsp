@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,35 +31,10 @@ function myFunction() {
 </script>
 </head>
 <body>
-<div id="templatemo_header_wrapper">
-    <div id="templatemo_menu">
-    	<div id="site_title">
-           <a href="#" style="float:left;" target="_parent">
-                <img src="../Images/e-lib.png" height="100px" alt="Site Title" />
+<c:set var="context" value="${pageContext.request.contextPath}" />
+<%@include file="menuheader.jsp" %>
 
-            </a>	
-     
-        </div>
-    
-    </div>
-
-</div>
-
-<div id="templatemo_menu_wrapper">
-    <div id="templatemo_menu">
-        <ul>
-           <li><a href="../index.html">Home</a></li>
-                    <li><a href="members.jsp">Member Details</a></li>
-                    <li><a href="bookingdetails.jsp">Book Details</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                     <li><a href="adminlogin.html">Logout</a></li>
-                   </ul>    	
-     
-    </div> <!-- end of templatemo_menu -->
-</div>
-
-<div id="templatemo_content_wrapper">
+<div id="templatemo_content">
 
 	
     
@@ -71,7 +49,6 @@ function myFunction() {
             </form>--%>
             
     
-     <div id="templatemo_content">
 
         
         <div class="content_box">
@@ -85,34 +62,33 @@ function myFunction() {
 
 			<table id="myTable">
 			  <tr class="header">
-			    <th style="width:60%;">Book ID</th>
-			    <th style="width:40%;">Book Name</th>
-			    <th style="width:40%;">Author</th>
-			    <th style="width:40%;">Published Date</th>
-			    <th style="width:40%;">Issue Status</th>
-			  </tr>
-			  <tr>
-			    <td><a href="bookdetails.jsp">1</a></td>
-			    <td>abc</td>
-			    <td>abc</td>
-			    <td>abc</td>
-			    <td>Available</td>
-			    
-			  </tr>
-			  <tr>
-			    <td>1</td>
-			    <td>abc</td>
-			    <td>abc</td>
-			    <td>abc</td>
-			    <td>Available</td>
+			    <th style="width:25%; text-align: center;">Book ID</th>
+			    <th style="width:25%; text-align: center;">Book Name</th>
+			    <th style="width:25%; text-align: center;">Author</th>
+			    <!-- <th style="width:40%;">Published Date</th> -->
+			    <th style="width:25%; text-align: center;">Issue Status</th>
 			  </tr>
 			  
+			  <c:forEach items="${bookDetails}" var="book">
+				<tr>
+					<td style="text-align: center;"><a
+						href="${context}/admin/books?id=${book.id}"><c:out
+								value="${book.id}" /></a></td>
+					<td style="text-align: center;"><c:out
+							value="${book.bookName}" /></td>
+					<td style="text-align: center;"><c:out
+							value="${book.publisher}" /></td>
+					<td style="text-align: center;">
+					<c:if test="${book.availble==true}">Available</c:if>
+					<c:if test="${book.availble==false}">Issued</c:if></td>
+				</tr>
+			</c:forEach>
+						
 			</table>
         
         	<div class="cleaner"></div>
         </div><div class="content_box_bottom"></div>
     
-    </div> <!-- end of content -->
     
     <div class="cleaner"></div>
 

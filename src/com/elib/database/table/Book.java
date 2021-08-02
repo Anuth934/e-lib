@@ -45,7 +45,7 @@ public class Book {
 	 */
 	public static void deleteBook(int id) {
 		try(Connection conn = DBConnection.dbConnection();
-				PreparedStatement stmt = conn.prepareStatement("delete from libraryuser where Bookid=?");) {
+				PreparedStatement stmt = conn.prepareStatement("delete from books where Bookid=?");) {
 			
 			stmt.setInt(1, id);
 			stmt.executeUpdate();
@@ -138,6 +138,11 @@ public class Book {
 		book.setPublisher(resultSet.getString("Publisher"));
 		book.setIssuedMemberId(resultSet.getInt("Issuedmemberid"));
 		book.setDate(resultSet.getDate("Issueddate"));
+		if(book.getIssuedMemberId() == 0 && book.getDate()== null) {
+			book.setAvailble(true);
+		} else {
+			book.setAvailble(false);
+		}
 		return book;
 	}
 	

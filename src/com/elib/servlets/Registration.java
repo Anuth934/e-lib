@@ -62,7 +62,7 @@ public class Registration extends HttpServlet {
 	{
 		out.print("<span style='color:red;'>Sorry, your passwords are not same. Please try again.</span>");
 		RequestDispatcher requestDispatcher = 
-				req.getRequestDispatcher("/register.html");
+				req.getRequestDispatcher("/register.jsp");
 		
 		requestDispatcher.include(req, res);
 	}
@@ -71,6 +71,9 @@ public class Registration extends HttpServlet {
 	{
 		
 		LibraryUser.insertRecord(user);
+		
+		EmailSender.sendMail(req, res, user);
+		
 		res.sendRedirect(req.getContextPath() + "/admin/members");
 	}
 		

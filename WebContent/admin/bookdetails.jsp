@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,41 +11,10 @@
 <link href="../Styles/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div id="templatemo_header_wrapper">
-    <div id="templatemo_menu">
-    	<div id="site_title">
-           <a href="#" style="float:left;" target="_parent">
-                <img src="../Images/e-lib.png" height="100px" alt="Site Title" />
+<c:set var="context" value="${pageContext.request.contextPath}" />
+<%@include file="menuheader.jsp" %>
 
-            </a>
-           
-        </div>
-    
-    </div>
-
-</div>
-
-<div id="templatemo_menu_wrapper">
-    <div id="templatemo_menu">
-        
-<div id="templatemo_menu_wrapper">
-    <div id="templatemo_menu">
-
-        <ul>
-           <li><a href="../index.html">Home</a></li>
-                    <li><a href="members.jsp">Member Details</a></li>
-                    <li><a href="bookdetails.jsp">Book Details</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                     <li><a href="adminlogin.html">Logout</a></li>
-                   </ul>    	
-     
-    </div> <!-- end of templatemo_menu -->
-</div>
-    </div> <!-- end of templatemo_menu -->
-</div>
-
-<div id="templatemo_content_wrapper">
+<div id="templatemo_content">
 
 	
     
@@ -55,31 +27,26 @@
             <input type="text" value="" name="username" size="10" id="input_field" title="usernmae" />
             <input type="submit" name="login" value="Ask" alt="login" id="submit_btn" title="Login" />
             </form>--%>
-            
-    
-     <div id="templatemo_content">
-
-        
         <div class="content_box">
         
-        	<form method="post" action="registrationpage"> 
+        	<form method="post" action="${context}/admin/delete/book"> 
 
             <label> Book ID : </label>  
-            <label>001</label> <br><br>
+            <label>${bookById.id}</label> <br><br>
 			<label> Book Name : </label>         
-			<label>Harry Potter and the philosopher's stone</label> <br><br>
+			<label>${bookById.bookName}</label> <br><br>
 			<label> Author : </label>         
-			<label>J.K. Rowling</label> <br><br>  
+			<label>${bookById.author}</label> <br><br>  
 			  
 			<label>   
-			Publish Date :  
+			Publisher  
 			</label>  
-			<label>01-02-2001</label> <br><br>
+			<label>${bookById.publisher}</label> <br><br>
 	
 			<label> Status : </label>         
-			 <label>Available</label> <br><br>
-			
-			<input type="submit" value="Issue"/>  
+			<label>${bookById.availble}</label> <br><br>
+			 
+			<input type="hidden" value="${bookById.id}" name="id"/>
 			<input type="submit" value="Delete"/> 
 			</form>  
            
@@ -88,7 +55,6 @@
         	<div class="cleaner"></div>
         </div><div class="content_box_bottom"></div>
     
-    </div> <!-- end of content -->
     
     <div class="cleaner"></div>
 
