@@ -23,8 +23,8 @@
         <div class="menu">
         	    	<ul>
                     <li><a href="${context}/admin/welcome.jsp">Home</a></li>
-                    <li><a href="${context}/admin/members">Member Details</a></li>
-                    <li><a href="${context}/admin/bookdetails.jsp">Book Details</a></li>
+                    <li><a href="${context}/admin/members.jsp">Member List</a></li>
+                    <li><a href="${context}/admin/bookds.jsp">Book List</a></li>
                      <li><a href="${context}/admin/contactus">About Us</a></li>
        </ul>
         </div>
@@ -75,7 +75,7 @@
                     <li><a href="welcomeadmin.jsp">Contact Us</a></li>
        </ul>
                 
-                Copyright © 2021 <a href="#">e-lib library management system</a> | 
+                Copyright @ 2021 <a href="#">e-lib library management system</a> | 
                
     
 </div>

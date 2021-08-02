@@ -8,6 +8,27 @@
 <meta charset="UTF-8">
 <title>elib-library management system</title>
 <link href="../Styles/main.css" rel="stylesheet" type="text/css" />
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
 </head>
 <body>
 
@@ -40,27 +61,27 @@
 
 		<div class="content_box">
 			<div class="MemberDetails">
-				<label>Members</label> 
+				<h2>Members</h2> 
 			</div>
-
+			<br>
 			<div class="registrationlink">
-				<a href="${context}/admin/memberregistration.jsp">Register new member</a>
+				<a href="${context}/admin/memberregistration.jsp">Add new member</a>
 			</div>
 
-			</br>
+			 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+			
 			<div class="memberlist">
-				<table style="width: 100%">
-					<thead>
-						<tr>
+				<table id="myTable">
+
+						<tr class="header">
 							<th style="width: 10%">Id</th>
-							<th style="width: 10%">Last Name</th>
-							<th style="width: 10%">First Name</th>
-							<th style="width: 10%">Email</th>
+							<th style="width: 20%">Last Name</th>
+							<th style="width: 20%">First Name</th>
+							<th style="width: 20%">Email</th>
 							<th style="width: 10%">Phone Number</th>
 							<th style="width: 20%">Address</th>
 						</tr>
-					</thead>
-					<tbody>
+
 						<c:forEach items="${userDetails}" var="member">
 							<tr>
 								<td style="text-align: center;"><a
@@ -78,7 +99,6 @@
 										value="${member.address}" /></td>
 							</tr>
 						</c:forEach>
-					</tbody>
 				</table>
 			</div>
 			<div class="cleaner"></div>
