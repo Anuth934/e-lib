@@ -11,11 +11,13 @@ public class Test {
 
 	public static void main(String[] args) throws SQLException {
 		LibraryUser user = new LibraryUser();
-		/*
-		LibraryUser.insertRecord("James", "NAinu", "nainu.james@gmail.com", "password", "1234567", "address", 1);
-		LibraryUser.insertRecord("Jose", "Betssey", "betssyjose@gmail.com", "password", "1234567", "address", 1);
-		LibraryUser.insertRecord("lakshmi", "Sree", "sree.lakshmi@gmail.com", "password", "1234567", "address2", 1);
-		*/
+		
+		LibraryUser.insertRecord("Last1", "First1", "l1.f1@gmail.com", "password", "1234567", "address", 0);
+		LibraryUser.insertRecord("Last2", "First2", "l2.f2@gmail.com", "password", "1234567", "address", 0);
+		LibraryUser.insertRecord("Last3", "First3", "l3.f3@gmail.com", "password", "1234567", "address", 0);
+		LibraryUser.insertRecord("Last4", "First4", "l4.f4@gmail.com", "password", "1234567", "address", 0);
+		LibraryUser.insertRecord("Last5", "First5", "l5.f5@gmail.com", "password", "1234567", "address", 0);
+		
 		
 		//LibraryUser.deleteRecord(5);
 		
@@ -27,13 +29,19 @@ public class Test {
 		
 		//System.out.println(LibraryUser.getUserDetails(2));
 		
-		LibraryUser.insertRecord("Jose", "Betssey", "betssyjose@gmail.com", "password", "1234567", "address", 1);
+		//LibraryUser.insertRecord("Jose", "Betssey", "betssyjose@gmail.com", "password", "1234567", "address", 1);
 		
-		List<User> userDetails = LibraryUser.getUserDetailsByLastName("Jo");
+		/*List<User> userDetails = LibraryUser.getUserDetailsByLastName("Jo");
 		
 		for(User user1: userDetails) {
 			System.out.println(user1);
-		}
+		}*/
+		
+		/*List<User> userDetails = LibraryUser.getUserDetailsByEmail("betssyjose@gmail.com");
+		
+		for(User user1: userDetails) {
+			System.out.println(user1);
+		}*/
 		
 		/*
 		Book.insertRecord("Book1", "Author1", "Publisher1");

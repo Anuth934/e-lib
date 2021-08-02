@@ -187,4 +187,22 @@ public class Book {
 		}
 	}
 
+	public static void returnAllBooksForCustomer(String id) {
+		try(Connection conn = DBConnection.dbConnection();
+				PreparedStatement stmt = conn.prepareStatement("select * from books where Issuedmemberid=?");) {
+			stmt.setInt(1, Integer.valueOf(id));
+			List<com.elib.model.Book> books = new ArrayList<com.elib.model.Book>();
+			
+			ResultSet resultSet = stmt.executeQuery();
+			
+			while(resultSet.next()) {
+				returnBook(resultSet.getInt("BookId"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+
 }

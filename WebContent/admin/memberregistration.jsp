@@ -1,18 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>elib-library management system</title>
-<link href="Styles/main.css" rel="stylesheet" type="text/css" />
+<link href="../Styles/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="templatemo_header_wrapper">
     <div id="templatemo_menu">
     	<div id="site_title">
            <a href="#" style="float:left;" target="_parent">
-                <img src="Images/e-lib.png" height="100px" alt="Site Title" />
+                <img src="../Images/e-lib.png" height="100px" alt="Site Title" />
 
             </a>	
      
@@ -53,12 +55,39 @@
     
      <div id="templatemo_content">
 
+        	<c:set var="context" value="${pageContext.request.contextPath}" />
         
         <div class="content_box">
         
-        	<h2>Welcome Admin</h2>
+        	<h2>Member Details</h2><br>
             
-          
+		<form method="post" action="${context}/admin/registernewuser"> 
+
+		<label> Firstname </label>         
+		<input type="text" name="firstname" size="15"/> <br> <br>  
+		<label> Lastname: </label>         
+		<input type="text" name="lastname" size="15"/> <br> <br>  
+		  
+		<label>   
+		Phone :  
+		</label>  
+		<input type="text" name="countrycode"  value="+1" size="3"/>   
+		<input type="text" name="phone" maxlength="10" size="10" /> <br> <br>  
+		Address  
+		<br>  
+		<textarea cols="80" rows="5" name="address" > 
+		</textarea>  
+		<br> <br>  
+		Email:  
+		<input type="email" id="email" name="email"/> <br>    
+		<br> 
+		Password :  
+		<input type="password" id="password" name="password"/> <br>    
+		<br>
+
+		
+		<input type="submit" value="Register"/>  
+		</form>  
            
         
         	<div class="cleaner"></div>
@@ -78,7 +107,7 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Adminstrator</a></li>
                     <li><a href="memberdetails.jsp">Library Member</a></li>
-                    <li><a href="bookingdetails.jsp">Book Details</a></li>
+                    <li><a href="bookdetails.jsp">Book Details</a></li>
                      <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
             </ul>

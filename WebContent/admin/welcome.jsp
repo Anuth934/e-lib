@@ -1,28 +1,32 @@
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>elib-library management system</title>
-<link href="Styles/main.css" rel="stylesheet" type="text/css" />
+<link href="../Styles/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
+<c:set var="context" value="${pageContext.request.contextPath}" />
 <div id="templatemo_header_wrapper">
     <div id="templatemo_menu">
     	<div id="site_title">
            <a href="#" style="float:left;" target="_parent">
-                <img src="Images/e-lib.png" height="100px" alt="Site Title" />
-
+                <img src="../Images/e-lib.png" height="100px" alt="Site Title" />
             </a>
-
 	         <ul style="background-color: white;">
-	           <li><a href="memberlogin.html">Member Login</a></li>
-	           <li><a href="adminlogin.html">Administrator Login</a></li>
-	             
-	                   
-	          </ul>    	
-     
-           
+	           <li><a href="memberlogin.html">Logout</a></li>
+	         </ul>    	
+        </div>
+        <div class="menu">
+        	    	<ul>
+                    <li><a href="${context}/admin/welcome.jsp">Home</a></li>
+                    <li><a href="${context}/admin/members">Member Details</a></li>
+                    <li><a href="${context}/admin/bookdetails.jsp">Book Details</a></li>
+                     <li><a href="${context}/admin/contactus">About Us</a></li>
+       </ul>
         </div>
     
     </div>
@@ -67,11 +71,11 @@
         <ul class="footer_menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Administrator</a></li>
-                    <li><a href="memberdetails.jsp">Library Member</a></li>
+                    <li><a href="memberdetails.jsp">Member Details</a></li>
                     <li><a href="bookingdetails.jsp">Book Details</a></li>
                      <li><a href="#">About Us</a></li>
                     <li><a href="welcomeadmin.jsp">Contact Us</a></li>
-            </ul>
+       </ul>
                 
                 Copyright © 2021 <a href="#">e-lib library management system</a> | 
                

@@ -1,3 +1,5 @@
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -5,17 +7,17 @@
 <head>
 <meta charset="UTF-8">
 <title>elib-library management system</title>
-<link href="Styles/main.css" rel="stylesheet" type="text/css" />
+<link href="../Styles/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="templatemo_header_wrapper">
     <div id="templatemo_menu">
     	<div id="site_title">
            <a href="#" style="float:left;" target="_parent">
-                <img src="Images/e-lib.png" height="100px" alt="Site Title" />
+                <img src="../Images/e-lib.png" height="100px" alt="Site Title" />
 
-            </a>
-           
+            </a>	
+     
         </div>
     
     </div>
@@ -24,10 +26,6 @@
 
 <div id="templatemo_menu_wrapper">
     <div id="templatemo_menu">
-        
-<div id="templatemo_menu_wrapper">
-    <div id="templatemo_menu">
-
         <ul>
            <li><a href="index.html">Home</a></li>
                     <li><a href="members.jsp">Member Details</a></li>
@@ -37,8 +35,6 @@
                      <li><a href="adminlogin.html">Logout</a></li>
                    </ul>    	
      
-    </div> <!-- end of templatemo_menu -->
-</div>
     </div> <!-- end of templatemo_menu -->
 </div>
 
@@ -62,27 +58,9 @@
         
         <div class="content_box">
         
-        	<form method="post" action="registrationpage"> 
-
-            <label> Book ID : </label>  
-            <label>001</label> <br><br>
-			<label> Book Name : </label>         
-			<label>Harry Potter and the philosopher's stone</label> <br><br>
-			<label> Author : </label>         
-			<label>J.K. Rowling</label> <br><br>  
-			  
-			<label>   
-			Publish Date :  
-			</label>  
-			<label>01-02-2001</label> <br><br>
-	
-			<label> Status : </label>         
-			 <label>Available</label> <br><br>
-			
-			<input type="submit" value="Issue"/>  
-			<input type="submit" value="Delete"/> 
-			</form>  
-           
+        	<h2>Welcome Admin</h2>
+            
+          
            
         
         	<div class="cleaner"></div>
@@ -94,16 +72,28 @@
 
 </div>
 
+<c:set var="context" value="${pageContext.request.contextPath}" />
+
+<form action ="${context}/admin/login">
+
+email: <input type ="text" name ="username"/><br>
+Password: <input type ="text" name ="password"/><br>
+
+<input type ="Submit" value ="Login"/>
+
+
+</form>
+
 <div id="templatemo_footer_wrapper">
 
     <div id="templatemo_footer">
     
         <ul class="footer_menu">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Administrator</a></li>
+                    <li><a href="#">Adminstrator</a></li>
                     <li><a href="memberdetails.jsp">Library Member</a></li>
                     <li><a href="bookingdetails.jsp">Book Details</a></li>
-                    <li><a href="#">About Us</a></li>
+                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
             </ul>
                 
