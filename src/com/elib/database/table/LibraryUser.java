@@ -24,21 +24,20 @@ public class LibraryUser {
 	 * @throws SQLException
 	 */
 
-	public static void insertRecord(String lastName, String firstName, String email, String password, String phoneNumber, String address,
-			int userType) throws SQLException
+	public static void insertRecord(User user) throws SQLException
 	{
 
 		try (Connection con = DBConnection.dbConnection();
 				PreparedStatement stmt = con.prepareStatement("insert into libraryuser(LastName, FirstName,Emailid, Userpassword, Phonenumber, Address, Usertype) "
 						+ "values(?,?,?,?,?,?,?)");) {
 			
-			stmt.setString(1, lastName);
-			stmt.setString(2, firstName);
-			stmt.setString(3, email);
-			stmt.setString(4, password);
-			stmt.setString(5, phoneNumber);
-			stmt.setString(6, address);
-			stmt.setInt(7, userType);
+			stmt.setString(1, user.getLastName());
+			stmt.setString(2, user.getFirstName());
+			stmt.setString(3, user.getEmail());
+			stmt.setString(4, user.getPassword());
+			stmt.setString(5, user.getPhoneNumber());
+			stmt.setString(6, user.getAddress());
+			stmt.setInt(7, user.getUserType());
 			stmt.executeUpdate();
 			System.out.println("inserted Succesfully");
 

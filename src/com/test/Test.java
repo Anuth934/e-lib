@@ -27,7 +27,7 @@ public class Test {
 		
 		//System.out.println(LibraryUser.getUserDetails(2));
 		
-		LibraryUser.insertRecord("Jose", "Betssey", "betssyjose@gmail.com", "password", "1234567", "address", 1);
+		LibraryUser.insertRecord(new User());
 		
 		List<User> userDetails = LibraryUser.getUserDetailsByLastName("Jo");
 		

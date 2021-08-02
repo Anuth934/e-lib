@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>elib-library management system</title>
-<link href="Styles/main.css" rel="stylesheet" type="text/css" />
+<link href="../Styles/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -11,17 +11,9 @@
     <div id="templatemo_menu">
     	<div id="site_title">
            <a href="#" style="float:left;" target="_parent">
-                <img src="Images/e-lib.png" height="100px" alt="Site Title" />
+                <img src="../Images/e-lib.png" height="100px" alt="Site Title" />
 
             </a>
-
-	         <ul style="background-color: white;">
-	           <li><a href="user/userlogin.html">Member Login</a></li>
-	           <li><a href="admin/adminlogin.html">Administrator Login</a></li>
-	             
-	                   
-	          </ul>    	
-     
            
         </div>
     
@@ -34,21 +26,17 @@
     
     <div id="templatemo_content">
     
-    	<div class="content_box">
-        
-        	<h2 style="font-size:40px;">Welcome to E Lib</h2>
-        	<div class="cleaner_h60"></div>
-            
-            <p style="font-size:40px; font-style: italic; line-height: 1.5em;"> “The reading of all good books is like conversation with the finest (people) of the past centuries.”</p>
-            
-          <div class="cleaner_h20"></div>
-            
-            
-            <div class="section_w250 float_r">
-            
-            	<p style="float: right; font-size:20px;">- Descartes</p>
-            
-            </div>
+    	<div class="content_box" style="text-align: center;">
+        <h2>Welcome Administrator</h2><br>
+         <form action="adminoginpage">
+	      <!-- user name: login, password: login123 -->
+	      Emailid: <input type="text" name="email" /><br /><br />
+	      Password: <input type="password" name="pass" /><br /><br />
+	
+	      <input type="Submit" value="Login" />
+
+	    </form>
+    
         <div class="cleaner_h20"></div>
         	<div class="cleaner"></div>
         </div><div class="content_box_bottom"></div>

@@ -5,14 +5,34 @@
 <head>
 <meta charset="UTF-8">
 <title>elib-library management system</title>
-<link href="Styles/main.css" rel="stylesheet" type="text/css" />
+<link href="../Styles/main.css" rel="stylesheet" type="text/css" />
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
 </head>
 <body>
 <div id="templatemo_header_wrapper">
     <div id="templatemo_menu">
     	<div id="site_title">
            <a href="#" style="float:left;" target="_parent">
-                <img src="Images/e-lib.png" height="100px" alt="Site Title" />
+                <img src="../Images/e-lib.png" height="100px" alt="Site Title" />
 
             </a>	
      
@@ -25,7 +45,7 @@
 <div id="templatemo_menu_wrapper">
     <div id="templatemo_menu">
         <ul>
-           <li><a href="index.html">Home</a></li>
+           <li><a href="../index.html">Home</a></li>
                     <li><a href="members.jsp">Member Details</a></li>
                     <li><a href="bookingdetails.jsp">Book Details</a></li>
                     <li><a href="#">About Us</a></li>
@@ -56,33 +76,38 @@
         
         <div class="content_box">
         
-        	<h2>Member Details</h2><br>
+        	<h2>Books List</h2><br>
             
-		<form method="post" action="registrationpage"> 
+            
+	<span><a href="admin/register.html">Add new member</a></span> <span></span>
 
-		<label> Firstname </label>         
-		<input type="text" name="firstname" size="15"/> <br> <br>  
-		<label> Lastname: </label>         
-		<input type="text" name="lastname" size="15"/> <br> <br>  
-		  
-		<label>   
-		Phone :  
-		</label>  
-		<input type="text" name="country code"  value="+1" size="3"/>   
-		<input type="text" name="phone" maxlength="10" size="10" /> <br> <br>  
-		Address  
-		<br>  
-		<textarea cols="80" rows="5" name="address" > 
-		</textarea>  
-		<br> <br>  
-		Email:  
-		<input type="email" id="email" name="email"/> <br>    
-		<br> <br>  
+           <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
-		
-		<input type="submit" value="Update"/>  
-		</form>  
-           
+			<table id="myTable">
+			  <tr class="header">
+			    <th style="width:60%;">Book ID</th>
+			    <th style="width:40%;">Book Name</th>
+			    <th style="width:40%;">Author</th>
+			    <th style="width:40%;">Published Date</th>
+			    <th style="width:40%;">Issue Status</th>
+			  </tr>
+			  <tr>
+			    <td><a href="bookdetails.jsp">1</a></td>
+			    <td>abc</td>
+			    <td>abc</td>
+			    <td>abc</td>
+			    <td>Available</td>
+			    
+			  </tr>
+			  <tr>
+			    <td>1</td>
+			    <td>abc</td>
+			    <td>abc</td>
+			    <td>abc</td>
+			    <td>Available</td>
+			  </tr>
+			  
+			</table>
         
         	<div class="cleaner"></div>
         </div><div class="content_box_bottom"></div>
@@ -111,4 +136,3 @@
     </div>
 </div>
 </body>
-</html>
