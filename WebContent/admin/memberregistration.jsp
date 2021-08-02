@@ -10,35 +10,9 @@
 <link href="../Styles/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div id="templatemo_header_wrapper">
-    <div id="templatemo_menu">
-    	<div id="site_title">
-           <a href="#" style="float:left;" target="_parent">
-                <img src="../Images/e-lib.png" height="100px" alt="Site Title" />
-
-            </a>	
-     
-        </div>
-    
-    </div>
-
-</div>
-
-<div id="templatemo_menu_wrapper">
-    <div id="templatemo_menu">
-        <ul>
-           <li><a href="index.html">Home</a></li>
-                    <li><a href="members.jsp">Member Details</a></li>
-                    <li><a href="bookingdetails.jsp">Book Details</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                     <li><a href="adminlogin.html">Logout</a></li>
-                   </ul>    	
-     
-    </div> <!-- end of templatemo_menu -->
-</div>
-
-<div id="templatemo_content_wrapper">
+<c:set var="context" value="${pageContext.request.contextPath}" />
+<%@include file="menuheader.jsp" %>
+<div id="templatemo_content">
 
 	
     
@@ -53,7 +27,7 @@
             </form>--%>
             
     
-     <div id="templatemo_content">
+     <div id="content_box">
 
         	<c:set var="context" value="${pageContext.request.contextPath}" />
         
