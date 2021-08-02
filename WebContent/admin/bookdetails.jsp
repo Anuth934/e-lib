@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>elib-library management system</title>
-<link href="Styles/main.css" rel="stylesheet" type="text/css" />
+<link href="../Styles/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="templatemo_header_wrapper">
@@ -29,9 +29,9 @@
     <div id="templatemo_menu">
 
         <ul>
-           <li><a href="index.html">Home</a></li>
+           <li><a href="../index.html">Home</a></li>
                     <li><a href="members.jsp">Member Details</a></li>
-                    <li><a href="bookingdetails.jsp">Book Details</a></li>
+                    <li><a href="bookdetails.jsp">Book Details</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
                      <li><a href="adminlogin.html">Logout</a></li>
