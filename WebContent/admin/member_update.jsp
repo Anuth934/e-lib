@@ -55,13 +55,15 @@
 		Email:  
 		<input type="email" id="email" name="email" value="${userById.email}"/> <br>    
 		<br> 
+		<!-- 
 		Password :  
 		<input type="password" id="password" name="password" value="${userById.password}"/> <br>    
 		<br>
 		Re-password :  
 		<input type="password" id="password" name="repassword" value="${userById.password}"/> <br>    
 		<br>
-
+		-->
+		<input type="hidden" name="password" value="${userById.password}"/>
 		<input type="hidden" value="${userById.id}" name="id"/>
 		<input type="submit" value="Update"/>  
 		</form>  

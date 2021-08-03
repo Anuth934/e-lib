@@ -54,12 +54,13 @@
 		Email:  
 		<input type="email" id="email" name="email"/> <br>    
 		<br> 
-		Password :  
+		<!-- Password :  
 		<input type="password" id="password" name="password"/> <br>    
 		<br>
 		Re-password :  
 		<input type="password" id="password" name="repassword"/> <br>    
 		<br>
+		-->
 
 		
 		<input type="submit" value="Register"/>  

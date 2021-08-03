@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.lang3.RandomStringUtils;
+
 import com.elib.database.table.LibraryUser;
 import com.elib.model.User;
 
@@ -53,31 +55,18 @@ public class Registration extends HttpServlet {
     	user.setPhoneNumber(req.getParameter("phone"));
     	user.setAddress(req.getParameter("address"));
     	user.setEmail(req.getParameter("email"));
-    	user.setPassword(req.getParameter("password"));
-    	user.setUserType(0);
-    	String repass = req.getParameter("repassword");
-		
-		//Validation password and retype password should be same
-	if(!user.getPassword().equals(repass))
-	{
-		out.print("<span style='color:red;'>Sorry, your passwords are not same. Please try again.</span>");
-		RequestDispatcher requestDispatcher = 
-				req.getRequestDispatcher("/register.jsp");
-		
-		requestDispatcher.include(req, res);
-	}
-	//Redirecting to Welcome page and displaying result
-	else
-	{
+    	
+    	//generating random password to send to user
+    	String generatedPassword = RandomStringUtils.random(8, true, true);
+    	
+    	user.setPassword(generatedPassword);
+    	
 		
 		LibraryUser.insertRecord(user);
 		
-		EmailSender.sendMail(req, res, user);
+		RegistrationEmailSender.sendMail(req, res, user);
 		
 		res.sendRedirect(req.getContextPath() + "/admin/members");
-	}
-		
-
 
 	}	
 	
