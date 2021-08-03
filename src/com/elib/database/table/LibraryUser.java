@@ -40,6 +40,27 @@ public class LibraryUser {
 		}
 	}
 	
+	public static void updateRecord(User user) throws SQLException
+	{
+		try (Connection con = DBConnection.dbConnection();
+				PreparedStatement stmt = con.prepareStatement("update libraryuser set LastName=?, FirstName=?, Emailid=?,"
+						+ " Userpassword=?,  Phonenumber=?,  Address=?, Usertype=? where Userid=?");) {
+			
+			stmt.setString(1, user.getLastName());
+			stmt.setString(2, user.getFirstName());
+			stmt.setString(3, user.getEmail());
+			stmt.setString(4, user.getPassword());
+			stmt.setString(5, user.getPhoneNumber());
+			stmt.setString(6, user.getAddress());
+			stmt.setInt(7, user.getUserType());
+			stmt.setInt(8, user.getId());
+			stmt.executeUpdate();
+			System.out.println("updates Succesfully");
+		} catch(Exception e) {
+			System.out.println("Some error : " + e);
+		}
+	}
+	
 	/**
 	 * Method to delete a user by passing the id
 	 * @param id

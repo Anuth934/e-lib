@@ -53,10 +53,11 @@ function myFunction() {
         
         <div class="content_box">
         
+        
         	<h2>Books List</h2><br>
             
             
-	<span><a href="admin/register.html">Add new member</a></span> <span></span>
+	<span><a href="add_new_book.jsp">Add new book</a></span> <span></span>
 
            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 

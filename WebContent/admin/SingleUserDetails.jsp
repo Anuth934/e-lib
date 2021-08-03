@@ -29,7 +29,7 @@
 				<h2>Member Details</h2>
 				<br>
 
-				<form method="post" action="${context}/admin/delete">
+				<form method="post" action="${context}/admin/update">
 
 					<label> Id :  </label> <label>${userById.id}</label> <br> <br>
 					<label> First Name : </label> <label>${userById.lastName}</label> <br> <br>
@@ -38,7 +38,8 @@
 					<label> Phone Number : </label> <label>${userById.phoneNumber}</label> <br> <br>
 					<label> Email :  </label> <label>${userById.email}</label> <br> <br>
 					<input type="hidden" value="${userById.id}" name="id"/>
-					<input type="submit" value="Delete User"/>  
+					<input type="submit" name="update" value="Update User">
+					<input type="submit" name="delete" value="Delete User">
 				</form>
 				<div class="cleaner"></div>
 			</div>

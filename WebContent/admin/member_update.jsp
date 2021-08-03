@@ -33,36 +33,37 @@
         
         <div class="content_box">
         
-        	<h2>Member Details</h2><br>
+        	<h2>Update Member Details</h2><br>
             
-		<form method="post" action="${context}/admin/registernewuser"> 
+		<form method="post" action="${context}/admin/modifyMember"> 
 
-		<label> Firstname </label>         
-		<input type="text" name="firstname" size="15"/> <br> <br>  
-		<label> Lastname: </label>         
-		<input type="text" name="lastname" size="15"/> <br> <br>  
+		<label> Firstname :  </label>         
+		<input type="text" name="firstname" size="15" value="${userById.firstName}"/> <br> <br>
+		<label> Lastname : </label>         
+		<input type="text" name="lastname" size="15" value="${userById.lastName}"/> <br> <br>  
 		  
 		<label>   
 		Phone :  
-		</label>
-		<input type="text" name="phone" maxlength="10" size="10" /> <br> <br>  
+		</label>  
+		<input type="text" name="phone" maxlength="15" size="15" value="${userById.phoneNumber}"/> <br> <br>  
 		Address  
 		<br>  
-		<textarea cols="80" rows="5" name="address" > 
+		<textarea cols="80" rows="5" name="address"> 
+		<c:out value="${userById.address}" />
 		</textarea>  
 		<br> <br>  
 		Email:  
-		<input type="email" id="email" name="email"/> <br>    
+		<input type="email" id="email" name="email" value="${userById.email}"/> <br>    
 		<br> 
 		Password :  
-		<input type="password" id="password" name="password"/> <br>    
+		<input type="password" id="password" name="password" value="${userById.password}"/> <br>    
 		<br>
 		Re-password :  
-		<input type="password" id="password" name="repassword"/> <br>    
+		<input type="password" id="password" name="repassword" value="${userById.password}"/> <br>    
 		<br>
 
-		
-		<input type="submit" value="Register"/>  
+		<input type="hidden" value="${userById.id}" name="id"/>
+		<input type="submit" value="Update"/>  
 		</form>  
            
         

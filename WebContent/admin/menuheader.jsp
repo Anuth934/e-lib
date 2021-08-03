@@ -5,7 +5,7 @@
 					src="../Images/e-lib.png" height="100px" alt="Site Title" />
 				</a>
 				<ul>
-					<li><a href="memberlogin.html">Logout</a></li>
+					<li><a href="logout">Logout</a></li>
 				</ul>
 			</div>
 			<div class="menu">
