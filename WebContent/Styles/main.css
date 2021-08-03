@@ -393,3 +393,8 @@ h3 {
 #templatemo_content {
 	height:500px;
 }
+
+.errorMessage {
+    color: red;
+}
+

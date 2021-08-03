@@ -30,7 +30,14 @@
     	<div class="content_box" style="text-align: center;">
         <h2>Welcome to e-Lib</h2><br>
          <c:set var="context" value="${pageContext.request.contextPath}" />
-
+		
+		<div class="errorMessage">
+	         <c:if test="${errorMesssage != null}">
+				<c:out value="${errorMesssage}"></c:out>
+			</c:if>
+			<br>
+         </div>
+         
 		<form action ="${context}/user/login">
 	      <!-- user name: login, password: login123 -->
 	      Email Id: <input type="text" name="username" /><br /><br />
