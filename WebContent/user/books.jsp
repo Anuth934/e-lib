@@ -31,8 +31,8 @@ function myFunction() {
 </script>
 </head>
 <body>
-<c:set var="context" value="${pageContext.request.contextPath}" />
-<%@include file="menuheader.jsp" %>
+	<c:set var="context" value="${pageContext.request.contextPath}" />
+	<%@include file="user_menu_header.jsp" %>
 
 <div id="templatemo_content">
 
@@ -54,9 +54,6 @@ function myFunction() {
         <div class="content_box">
         
         	<h2>Books List</h2><br>
-            
-            
-	<span><a href="admin/register.html">Add new member</a></span> <span></span>
 
            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
@@ -72,7 +69,7 @@ function myFunction() {
 			  <c:forEach items="${bookDetails}" var="book">
 				<tr>
 					<td style="text-align: center;"><a
-						href="${context}/admin/books?id=${book.id}"><c:out
+						href="${context}/user/books?id=${book.id}"><c:out
 								value="${book.id}" /></a></td>
 					<td style="text-align: center;"><c:out
 							value="${book.bookName}" /></td>
@@ -102,7 +99,7 @@ function myFunction() {
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Adminstrator</a></li>
                     <li><a href="memberdetails.jsp">Library Member</a></li>
-                    <li><a href="book_details.jsp">Book Details</a></li>
+                    <li><a href="bookdetails.jsp">Book Details</a></li>
                      <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
             </ul>

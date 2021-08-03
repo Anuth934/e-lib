@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,11 +28,13 @@
     <div id="templatemo_content">
     
     	<div class="content_box" style="text-align: center;">
-        <h2>Welcome Member</h2> <br>
-         <form action="userloginpage">
+        <h2>Welcome to e-Lib</h2><br>
+         <c:set var="context" value="${pageContext.request.contextPath}" />
+
+		<form action ="${context}/user/login">
 	      <!-- user name: login, password: login123 -->
-	      EmailId: <input type="text" name="email" /><br /><br />
-	      Password: <input type="password" name="pass" /><br /><br />
+	      Email Id: <input type="text" name="username" /><br /><br />
+	      Password: <input type="password" name="password" /><br /><br />
 	
 	      <input type="Submit" value="Login" />
 

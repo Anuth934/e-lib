@@ -17,7 +17,7 @@
             </a>
 
 	         <ul style="background-color: white;">
-	           <li><a href="user/userlogin.html">Member Login</a></li>
+	           <li><a href="user/login.jsp">Member Login</a></li>
 	           <li><a href="admin/login.jsp">Administrator Login</a></li>
 	             
 	                   

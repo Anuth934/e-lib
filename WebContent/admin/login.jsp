@@ -59,7 +59,7 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Administrator</a></li>
                     <li><a href="admin/memberdetails.jsp">Library Member</a></li>
-                    <li><a href="admin/bookdetails.jsp">Book Details</a></li>
+                    <li><a href="admin/book_details.jsp">Book Details</a></li>
                      <li><a href="admin/members.jsp">About Us</a></li>
                     <li><a href="admin/welcomeadmin.jsp">Contact Us</a></li>
             </ul>
