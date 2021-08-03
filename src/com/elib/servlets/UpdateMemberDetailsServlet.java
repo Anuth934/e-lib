@@ -35,22 +35,13 @@ public class UpdateMemberDetailsServlet extends HttpServlet {
 			String repass = req.getParameter("repassword");
 			
 			//Validation password and retype password should be same
-			if(!user.getPassword().equals(repass)) {
-						out.print("<span style='color:red;'>Sorry, your passwords are not same. Please try again.</span>");
-						RequestDispatcher requestDispatcher = 
-								req.getRequestDispatcher("/register.jsp");
 						
-						requestDispatcher.include(req, res);
-			}
-			//Redirecting to Welcome page and displaying result
-			else {
-						
-						LibraryUser.updateRecord(user);
-						
-						//EmailSender.sendMail(req, res, user);
-						
-						res.sendRedirect(req.getContextPath() + "/admin/members");
-			}
+			LibraryUser.updateRecord(user);
+			
+			//EmailSender.sendMail(req, res, user);
+			
+			res.sendRedirect(req.getContextPath() + "/admin/members");
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

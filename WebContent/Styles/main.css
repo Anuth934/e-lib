@@ -286,7 +286,7 @@ h3 {
     margin: 36px;
 	background: #fff;
 	height: 400px;
-	overflow: scroll;
+	overflow: auto;
 }
 
 .content_box_bottom {
