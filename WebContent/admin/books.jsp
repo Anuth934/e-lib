@@ -57,7 +57,7 @@ function myFunction() {
         	<h2>Books List</h2><br>
             
             
-	<span><a href="add_new_book.jsp">Add new book</a></span> <span></span>
+	<span><a style="font-size: 16px;" href="add_new_book.jsp">Add new book</a></span> <span></span>
 
            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
@@ -102,8 +102,8 @@ function myFunction() {
         <ul class="footer_menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Adminstrator</a></li>
-                    <li><a href="memberdetails.jsp">Library Member</a></li>
-                    <li><a href="book_details.jsp">Book Details</a></li>
+                    <li><a href="#">Library Member</a></li>
+                    <li><a href="#">Book Details</a></li>
                      <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
             </ul>

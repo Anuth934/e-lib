@@ -36,7 +36,7 @@
     </div> <!-- end of templatemo_menu -->
 </div>
 
-<div id="templatemo_content_wrapper">
+
 
 	
     
@@ -91,7 +91,6 @@
     
     <div class="cleaner"></div>
 
-</div>
 
 <div id="templatemo_footer_wrapper">
 

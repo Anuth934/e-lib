@@ -25,7 +25,7 @@
 
 <div id="templatemo_content_wrapper">
     
-    <div id="templatemo_content">
+
     
     	<div class="content_box" style="text-align: center;">
         <h2>Welcome Administrator</h2><br>
@@ -43,14 +43,10 @@
         <div class="cleaner_h20"></div>
         	<div class="cleaner"></div>
         </div><div class="content_box_bottom"></div>
-        
-    
-    </div> <!-- end of content -->
     
     <div class="cleaner"></div>
 
 </div>
-
 <div id="templatemo_footer_wrapper">
 
     <div id="templatemo_footer">
@@ -64,7 +60,7 @@
                     <li><a href="admin/welcomeadmin.jsp">Contact Us</a></li>
             </ul>
                 
-                Copyright Â© 2021 <a href="#">e-lib library management system</a> | 
+                Copyright © 2021 <a href="#">e-lib library management system</a> | 
                
     
 </div>

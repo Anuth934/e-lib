@@ -25,7 +25,7 @@
 
 <div id="templatemo_content_wrapper">
     
-    <div id="templatemo_content">
+
     
     	<div class="content_box" style="text-align: center;">
         <h2>Welcome to e-Lib</h2><br>
@@ -45,7 +45,7 @@
         </div><div class="content_box_bottom"></div>
         
     
-    </div> <!-- end of content -->
+
     
     <div class="cleaner"></div>
 

@@ -36,19 +36,7 @@
     </div> <!-- end of templatemo_menu -->
 </div>
 
-<div id="templatemo_content_wrapper">
 
-	
-    
-
-			
-          <%--   <h2>AskQuestions</h2>
-            
-            <form action="www.javatpoint.com" method="get">
-            <label>Please enter your email address to ask or post java Question Answer.</label>
-            <input type="text" value="" name="username" size="10" id="input_field" title="usernmae" />
-            <input type="submit" name="login" value="Ask" alt="login" id="submit_btn" title="Login" />
-            </form>--%>
             
     
      <div id="templatemo_content">
@@ -68,7 +56,6 @@
     
     <div class="cleaner"></div>
 
-</div>
 
 <div id="templatemo_footer_wrapper">
 
