@@ -33,39 +33,22 @@
         
         <div class="content_box">
         
-        	<h2>Member Details</h2><br>
+        	<h2>About Us</h2><br>
             
-		<form method="post" action="${context}/admin/registernewuser"> 
-
-		<label> <b>Firstname</b> </label>         
-		<input type="text" name="firstname" size="15"/> <br> <br>  
-		<label> <b>Lastname:</b> </label>         
-		<input type="text" name="lastname" size="15"/> <br> <br>  
-		  
-		<label>   
-		<b>Phone :</b>  
-		</label>
-		<input type="text" name="phone" maxlength="10" size="10" /> <br> <br>  
-		<b>Address</b>  
-		<br>  
-		<textarea cols="80" rows="5" name="address" > 
-		</textarea>  
-		<br> <br>  
-		<b>Email: </b> 
-		<input type="email" id="email" name="email"/> <br>    
-		<br> 
-		<!-- Password :  
-		<input type="password" id="password" name="password"/> <br>    
-		<br>
-		Re-password :  
-		<input type="password" id="password" name="repassword"/> <br>    
-		<br>
-		-->
-
-		
-		<input type="submit" value="Register"/>  
-		</form>  
-           
+		<p>This is a Library Management System application developed for Java Project for the course
+		 Java programming II having course ID 2021S_MAD 4463_1. Our instructor is Simrandeep Kaur. 
+		 This application has all basic functionalities of a library system. An Admin has absolute
+		 authority in this web site. Admin can add/delete books, add/update/delete subscribed member details. 
+		 Upon user registration by admin, user will receive an email confirmation and password along with it.
+		 User can login using the email and password and can issue or return issued books.</p>
+         
+         <p>The is a team project and the members who contributed to create this application are:
+     		</p> 
+<br>
+     		<p>Akhila Jose - C0797217</p> 
+     		<p>Anuth Karithalackal Asokan - C0808934</p> 
+     		<p>Reeja Robert - C0806169</p> 
+     		<p>Reshma Mary Johns - C0805242</p> 
         
         	<div class="cleaner"></div>
         </div><div class="content_box_bottom"></div>
@@ -83,8 +66,8 @@
         <ul class="footer_menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Adminstrator</a></li>
-                    <li><a href="#">Library Member</a></li>
-                    <li><a href="#">Book Details</a></li>
+                    <li><a href="memberdetails.jsp">Library Member</a></li>
+                    <li><a href="bookdetails.jsp">Book Details</a></li>
                      <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
             </ul>

@@ -13,7 +13,7 @@
 					<li><a href="${context}/user/welcome.jsp">Home</a></li>
 					<li><a href="${context}/user/profile">Profile</a></li>
 					<li><a href="${context}/user/books">Book Details</a></li>
-					<li><a href="${context}/user/contactus">About Us</a></li>
+					<li><a href="${context}/user/aboutus.jsp">About Us</a></li>
 				</ul>
 			</div>
 

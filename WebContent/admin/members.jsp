@@ -97,10 +97,10 @@ function myFunction() {
 			<ul class="footer_menu">
 				<li><a href="#">Home</a></li>
 				<li><a href="#">Administrator</a></li>
-				<li><a href="memberdetails.jsp">Member Details</a></li>
-				<li><a href="bookingdetails.jsp">Book Details</a></li>
+				<li><a href="#">Member Details</a></li>
+				<li><a href="#">Book Details</a></li>
 				<li><a href="#">About Us</a></li>
-				<li><a href="welcomeadmin.jsp">Contact Us</a></li>
+				<li><a href="#">Contact Us</a></li>
 			</ul>
 
 			Copyright © 2021 <a href="#">e-lib library management system</a> |

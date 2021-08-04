@@ -37,22 +37,22 @@
             
 		<form method="post" action="${context}/admin/modifyMember"> 
 
-		<label> Firstname :  </label>         
+		<label> <b>Firstname : </b> </label>         
 		<input type="text" name="firstname" size="15" value="${userById.firstName}"/> <br> <br>
-		<label> Lastname : </label>         
+		<label> <b>Lastname :</b> </label>         
 		<input type="text" name="lastname" size="15" value="${userById.lastName}"/> <br> <br>  
 		  
 		<label>   
-		Phone :  
+		<b>Phone :</b>
 		</label>  
 		<input type="text" name="phone" maxlength="15" size="15" value="${userById.phoneNumber}"/> <br> <br>  
-		Address  
+		<b>Address</b>  
 		<br>  
 		<textarea cols="80" rows="5" name="address"> 
 		<c:out value="${userById.address}" />
 		</textarea>  
 		<br> <br>  
-		Email:  
+		<b>Email:</b>  
 		<input type="email" id="email" name="email" value="${userById.email}"/> <br>    
 		<br> 
 		<!-- 
@@ -85,8 +85,8 @@
         <ul class="footer_menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Adminstrator</a></li>
-                    <li><a href="memberdetails.jsp">Library Member</a></li>
-                    <li><a href="bookdetails.jsp">Book Details</a></li>
+                    <li><a href="#">Library Member</a></li>
+                    <li><a href="#">Book Details</a></li>
                      <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
             </ul>

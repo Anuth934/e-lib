@@ -32,19 +32,19 @@
         
         	<form method="post" action="${context}/user/action/book"> 
 
-            <label> Book ID : </label>  
+            <label> <b>Book ID :</b> </label>  
             <label>${bookById.id}</label> <br><br>
-			<label> Book Name : </label>         
+			<label> <b>Book Name :</b> </label>         
 			<label>${bookById.bookName}</label> <br><br>
-			<label> Author : </label>         
+			<label> <b>Author :</b> </label>         
 			<label>${bookById.author}</label> <br><br>  
 			  
 			<label>   
-			Publisher  
+			<b>Publisher</b>  
 			</label>  
 			<label>${bookById.publisher}</label> <br><br>
 	
-			<label> Status : </label>         
+			<label> <b>Status :</b> </label>         
 			<label>	<c:if test="${bookById.availble==true}">Available</c:if>
 					<c:if test="${bookById.availble==false}">Issued</c:if>
 			</label> <br><br>
@@ -52,12 +52,14 @@
 			<c:if test="${bookById.availble==true}">
 				<input type="hidden" value="issue" name="action"/>
 				<input type="hidden" value="${bookById.id}" name="bookId"/>
+				<input type="hidden" value="${bookById.bookName}" name="bookName"/>
 				<input type="submit" value="Issue Book"/> 
 			</c:if>
 			<c:if test="${bookById.availble==false}">
 				<c:if test="${bookById.issuedMemberId==user.id}">
 					<input type="hidden" value="return" name="action"/>
 					<input type="hidden" value="${bookById.id}" name="bookId"/>
+					<input type="hidden" value="${bookById.bookName}" name="bookName"/>
 					<input type="submit" value="Return Book"/> 
 				</c:if>
 			</c:if>
@@ -80,8 +82,8 @@
         <ul class="footer_menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Administrator</a></li>
-                    <li><a href="memberdetails.jsp">Library Member</a></li>
-                    <li><a href="bookingdetails.jsp">Book Details</a></li>
+                    <li><a href="#">Library Member</a></li>
+                    <li><a href="#">Book Details</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
             </ul>

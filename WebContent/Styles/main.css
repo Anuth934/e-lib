@@ -398,3 +398,16 @@ h3 {
     color: red;
 }
 
+.welcome {
+	background-image: url(../Images/library.jpeg);
+    background-repeat: no-repeat;
+    background-position: 515px -5px;
+    background-size: 850px;
+	
+}
+
+.firstpage{
+	background-image: url(../Images/elibrary.jpeg);
+    background-size: 900px;
+    background-repeat: no-repeat;
+}

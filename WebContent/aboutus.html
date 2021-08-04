@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <title>elib-library management system</title>
-<link href="../Styles/main.css" rel="stylesheet" type="text/css" />
+<link href="Styles/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -12,9 +12,17 @@
     <div id="templatemo_menu">
     	<div id="site_title">
            <a href="#" style="float:left;" target="_parent">
-                <img src="../Images/e-lib.png" height="100px" alt="Site Title" />
+                <img src="Images/e-lib.png" height="100px" alt="Site Title" />
 
             </a>
+
+	         <ul style="background-color: white;">
+	           <li><a href="user/login.jsp">Member Login</a></li>
+	           <li><a href="admin/login.jsp">Admin Login</a></li>
+	             
+	                   
+	          </ul>    	
+     
            
         </div>
     
@@ -25,34 +33,15 @@
 
 <div id="templatemo_content_wrapper">
     
-
     
-    	<div class="content_box" style="text-align: center;">
-        <h2>Welcome to e-Lib</h2><br>
-         <c:set var="context" value="${pageContext.request.contextPath}" />
-		
-		<div class="errorMessage">
-	         <c:if test="${errorMesssage != null}">
-				<c:out value="${errorMesssage}"></c:out>
-			</c:if>
-			<br>
-         </div>
-         
-		<form action ="${context}/user/login">
-	      <!-- user name: login, password: login123 -->
-	      Email Id: <input type="text" name="username" /><br /><br />
-	      Password: <input type="password" name="password" /><br /><br />
-	
-	      <input type="Submit" value="Login" />
-
-	    </form>
-    
+    	<div class="content_box">
+        
+       <p> This is a Library Management System web site developed for Java Project for the course Java programming II with course ID 2021S_MAD 4463_1
+       The is instructor </p>
+            </div>
         <div class="cleaner_h20"></div>
         	<div class="cleaner"></div>
-        </div><div class="content_box_bottom"></div>
-        
-    
-
+        <div class="content_box_bottom"></div>
     
     <div class="cleaner"></div>
 
@@ -71,7 +60,7 @@
                     <li><a href="#">Contact Us</a></li>
             </ul>
                 
-                Copyright � 2021 <a href="#">e-lib library management system</a> | 
+                Copyright Â© 2021 <a href="#">e-lib library management system</a> | 
                
     
 </div>

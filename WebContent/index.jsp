@@ -34,19 +34,19 @@
 <div id="templatemo_content_wrapper">
     
     
-    	<div class="content_box">
+    	<div class="content_box firstpage">
         
         	<h2 style="font-size:40px;">Welcome to E Lib</h2>
         	<div class="cleaner_h60"></div>
             
-            <p style="font-size:40px; font-style: italic; line-height: 1.5em;"> "The reading of all good books is like conversation with the finest (people) of the past centuries."</p>
+           <!--  <p style="font-size:40px; font-style: italic; line-height: 1.5em;"> "The reading of all good books is like conversation with the finest (people) of the past centuries."</p>
             
           <div class="cleaner_h20"></div>
             
             
             <div class="section_w250 float_r">
             
-            	<p style="float: right; font-size:20px;">-Descartes</p>
+            	<p style="float: right; font-size:20px;">-Descartes</p> -->
             
             </div>
         <div class="cleaner_h20"></div>
@@ -70,7 +70,7 @@
                     <li><a href="#">Contact Us</a></li>
             </ul>
                 
-                Copyright Â© 2021 <a href="#">e-lib library management system</a> | 
+                Copyright © 2021 <a href="#">e-lib library management system</a> | 
                
     
 </div>

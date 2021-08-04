@@ -13,7 +13,7 @@
 					<li><a href="${context}/admin/welcome.jsp">Home</a></li>
 					<li><a href="${context}/admin/members">Member Details</a></li>
 					<li><a href="${context}/admin/books">Book Details</a></li>
-					<li><a href="${context}/admin/contactus">About Us</a></li>
+					<li><a href="${context}/admin/aboutus.jsp">About Us</a></li>
 				</ul>
 			</div>
 

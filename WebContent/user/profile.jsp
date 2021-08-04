@@ -30,12 +30,12 @@
 				<br>
 
 
-					<label> Id :  </label> <label>${profile.id}</label> <br> <br>
-					<label> First Name : </label> <label>${profile.lastName}</label> <br> <br>
-					<label> Last Name : </label> <label>${profile.firstName}</label> <br> <br>
-					<label> Address : </label> <label>${profile.address}</label> <br> <br>
-					<label> Phone Number : </label> <label>${profile.phoneNumber}</label> <br> <br>
-					<label> Email :  </label> <label>${profile.email}</label> <br> <br>
+					<label> <b>Id :</b>  </label> <label>${profile.id}</label> <br> <br>
+					<label> <b>First Name :</b> </label> <label>${profile.lastName}</label> <br> <br>
+					<label> <b>Last Name :</b> </label> <label>${profile.firstName}</label> <br> <br>
+					<label> <b>Address :</b> </label> <label>${profile.address}</label> <br> <br>
+					<label> <b>Phone Number :</b> </label> <label>${profile.phoneNumber}</label> <br> <br>
+					<label> <b>Email :</b>  </label> <label>${profile.email}</label> <br> <br>
 
 				<div class="cleaner"></div>
 			</div>
@@ -55,8 +55,8 @@
 			<ul class="footer_menu">
 				<li><a href="#">Home</a></li>
 				<li><a href="#">Adminstrator</a></li>
-				<li><a href="memberdetails.jsp">Library Member</a></li>
-				<li><a href="bookdetails.jsp">Book Details</a></li>
+				<li><a href="#">Library Member</a></li>
+				<li><a href="#">Book Details</a></li>
 				<li><a href="#">About Us</a></li>
 				<li><a href="#">Contact Us</a></li>
 			</ul>

@@ -42,7 +42,7 @@
      <div id="templatemo_content">
 
         
-        <div class="content_box">
+        <div class="content_box welcome">
         
         	<h2>Welcome Member</h2>
             
